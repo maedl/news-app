@@ -20,5 +20,5 @@ export const News = () => {
     return items.map((item) => <NewsArticle key={item.url} article={item} />);
   };
 
-  return <ul>{renderItems(articles)}</ul>;
+  return <div className="row">{renderItems(articles)}</div>;
 };

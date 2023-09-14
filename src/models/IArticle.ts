@@ -4,6 +4,7 @@ export interface IArticle {
     name: string;
   };
   url: string;
+  urlToImage: string;
   author: string;
   title: string;
   description: string;

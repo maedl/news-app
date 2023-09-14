@@ -5,7 +5,22 @@ interface INewsArticleProps {
 }
 
 export const NewsArticle = (props: INewsArticleProps) => {
-  const { title } = props.article;
+  const { author, title, urlToImage, source, url } = props.article;
 
-  return <li>{title}</li>;
+  return (
+    <div className="col s4">
+      <div className="card medium">
+        <div className="card-image">
+          <img src={urlToImage} alt="" />
+          <span className="card-title">{source.name}</span>
+        </div>
+        <div className="card-content">
+          <p>{title}</p>
+        </div>
+        <div className="card-action">
+          <a href={url}>{author}</a>
+        </div>
+      </div>
+    </div>
+  );
 };
